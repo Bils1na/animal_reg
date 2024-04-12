@@ -21,7 +21,8 @@ public class AnimalRegistry {
             System.out.println("2. List of animals");
             System.out.println("3. Teach a new command");
             System.out.println("4. Order by date");
-            System.out.println("5. Exit");
+            System.out.println("5. List of commands");
+            System.out.println("6. Exit");
             System.out.println();
 
             int answer = menuIn.nextInt();
@@ -35,6 +36,8 @@ public class AnimalRegistry {
             } else if (answer == 4) {
                 orderByDate();
             } else if (answer == 5) {
+                commandList();
+            } else if (answer == 6) {
                 isActive = false;
                 System.out.println("Registry is closed!");
             }
@@ -81,6 +84,21 @@ public class AnimalRegistry {
         for (Animal animal : animals) {
             System.out.println(count++ + ": " + animal.getName() + " " + animal.getType().toLowerCase() +
                     " " + animal.getBirthDate() + " " + animal.getCommands());
+        }
+    }
+
+    private static void commandList() {
+        Integer count = 1;
+        System.out.println("Choose animal: ");
+        for (Map<String, String> pet : RegistryHandler.loadRegistry().values()) {
+            System.out.println(count++ + ": " + pet.get("name"));
+        }
+        Integer id = menuIn.nextInt();
+
+        for (Animal animal : animals) {
+            if (id == animal.getAnimalID()) {
+                System.out.println(animal.getCommands());
+            }
         }
     }
 
