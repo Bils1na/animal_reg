@@ -1,46 +1,11 @@
 package org.example.animalRegistry;
 
-import com.google.gson.Gson;
-
-import java.io.*;
 import java.util.*;
 
 public class AnimalRegistry {
     private static boolean isActive;
-    private static ArrayList<String> animals;
-    private static Scanner menu = new Scanner(System.in), creating = new Scanner(System.in);
-    private static Integer id = 2;
-
-    public static void loadRegistry() {
-        Gson gson = new Gson();
-
-        try {
-            File registry = new File("src\\main\\java\\org\\example\\animalRegistry\\registry.json");
-            FileReader registryJSON = new FileReader(registry.getAbsolutePath());
-            Map<String, Map<String, String>> data = gson.fromJson(registryJSON, Map.class);
-
-            System.out.println("Name: " + data.get("2").get("name"));
-            System.out.println("Type: " + data.get("2").get("type"));
-            System.out.println("Birthday: " + data.get("2").get("birthday"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void writeRegistry(ArrayList<String> data) throws IOException {
-        Map<String, String> newData = new HashMap<>();
-        newData.put("name", data.get(0));
-        newData.put("type", data.get(1));
-        newData.put("birthday", data.get(2));
-        Map<Integer, Map<String, String>> registryMap = new HashMap<>();
-        registryMap.put(id++, newData);
-
-        File registry = new File("src\\main\\java\\org\\example\\animalRegistry\\registry.json");
-        Gson gson = new Gson();
-        try (FileWriter writer = new FileWriter(registry.getAbsolutePath())){
-            gson.toJson(registryMap, writer);
-        }
-    }
+    private static ArrayList<Map<String, String>> animals;
+    private static Scanner menuIn = new Scanner(System.in), creatingIn = new Scanner(System.in);
 
     public static void start() {
         isActive = true;
@@ -55,7 +20,7 @@ public class AnimalRegistry {
             System.out.println("5. Exit");
             System.out.println();
 
-            int answer = menu.nextInt();
+            int answer = menuIn.nextInt();
             if (answer == 1) {
                 addAnimal();
             } else if (answer == 2){
@@ -70,18 +35,21 @@ public class AnimalRegistry {
     private static void addAnimal() {
         System.out.println("Enter name, type and birthday for animal. Example 'Frank dog 2024-04-12'");
 
-        ArrayList<String> newAnimal = new ArrayList<>(Arrays.asList(creating.nextLine().split(" ")));
+        ArrayList<String> newAnimal = new ArrayList<>(Arrays.asList(creatingIn.nextLine().split(" ")));
         try {
-            writeRegistry(newAnimal);
+            registryHandler.updateRegistry(newAnimal);
             System.out.println("The new animal added");
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private static void animalList() {
-        loadRegistry();
+        Map<Integer, Map<String, String>> jsonData = registryHandler.loadRegistry();
+        Integer count = 1;
+        for (Map<String, String> pet : jsonData.values()) {
+            System.out.println(count++ +": " + pet.get("name") + " " + pet.get("type") + " " + pet.get("birthday"));
+        }
     }
 
     private static void addCommand() {
