@@ -1,0 +1,784 @@
+1.---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ cat > Pets
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+Desktop    Downloads  Pets      Public  Templates
+
+Documents  Music      Pictures  snap    Videos
+
+bils1na@bils1na-VirtualBox:~$ cat > "Pack animals"
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+ Desktop     Downloads  'Pack animals'   Pictures   snap        Videos
+
+ Documents   Music       Pets            Public     Templates
+
+bils1na@bils1na-VirtualBox:~$ 
+
+bils1na@bils1na-VirtualBox:~$ nano Pets
+
+bils1na@bils1na-VirtualBox:~$ cat Pets
+
+Fido Dog
+
+Whiskers Cat
+
+Hammy Hamster
+
+Buddy Dog
+
+Smudge Cat
+
+Peanut Hamster
+
+Bella Dog
+
+Oliver Cat
+
+bils1na@bils1na-VirtualBox:~$ nano 'Pack animals' 
+
+bils1na@bils1na-VirtualBox:~$ cat Pack\ animals 
+
+Thunder Horse
+
+Sandy Camel
+
+Eeyore Donkey
+
+Storm Horse
+
+Dune Camel
+
+Burro Donkey
+
+Blaze Horse
+
+Sahara Camel
+
+bils1na@bils1
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ cat Pets Pack\ animals > 'Human Friends'
+
+bils1na@bils1na-VirtualBox:~$ cat Human\ Friends 
+
+Fido Dog
+
+Whiskers Cat
+
+Hammy Hamster
+
+Buddy Dog
+
+Smudge Cat
+
+Peanut Hamster
+
+Bella Dog
+
+Oliver Cat
+
+
+
+Thunder Horse
+
+Sandy Camel
+
+Eeyore Donkey
+
+Storm Horse
+
+Dune Camel
+
+Burro Donkey
+
+Blaze Horse
+
+Sahara Camel
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ mv Human\ Friends 'Human Friend'
+
+bils1na@bils1na-VirtualBox:~$ mv Human\ Friend 'Human Friends'
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+ Desktop     Downloads        Music           Pets       Public   Templates
+
+ Documents  'Human Friends'  'Pack animals'   Pictures   snap     Videos
+
+2.---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ mkdir 'animal_registration'
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+ animal_registration   Downloads       'Pack animals'   Public      Videos
+
+ Desktop              'Human Friends'   Pets            snap
+
+ Documents             Music            Pictures        Templates
+
+bils1na@bils1na-VirtualBox:~$ mv Human\ Friends animal_registration/
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+ animal_registration   Downloads       Pets       snap
+
+ Desktop               Music           Pictures   Templates
+
+ Documents            'Pack animals'   Public     Videos
+
+bils1na@bils1na-VirtualBox:~$ cd animal_registration/
+
+bils1na@bils1na-VirtualBox:~/animal_registration$ ls
+
+'Human Friends'
+
+3.---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+ animal_registration   Documents   Music                              'Pack animals'   Pictures   snap        Videos
+
+ Desktop               Downloads   mysql-apt-config_0.8.29-1_all.deb   Pets            Public     Templates
+
+bils1na@bils1na-VirtualBox:~$ sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb 
+
+[sudo] password for bils1na: 
+
+Selecting previously unselected package mysql-apt-config.
+
+(Reading database ... 178834 files and directories currently installed.)
+
+Preparing to unpack mysql-apt-config_0.8.29-1_all.deb ...
+
+Unpacking mysql-apt-config (0.8.29-1) ...
+
+Setting up mysql-apt-config (0.8.29-1) ...
+
+bils1na@bils1na-VirtualBox:~$ sudo apt update
+
+[sudo] password for bils1na: 
+
+Hit:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+
+Hit:2 http://repo.mysql.com/apt/ubuntu jammy InRelease
+
+Get:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+
+Hit:5 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+
+Fetched 110 kB in 1s (106 kB/s)                           
+
+Reading package lists... Done
+
+Building dependency tree... Done
+
+Reading state information... Done
+
+85 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+bils1na@bils1na-VirtualBox:~$ sudo apt install mysql-server
+
+Reading package lists... Done
+
+Building dependency tree... Done
+
+Reading state information... Done
+
+The following additional packages will be installed:
+
+  libaio1 libmecab2 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client mysql-common mysql-community-client
+
+  mysql-community-client-core mysql-community-client-plugins mysql-community-server mysql-community-server-core
+
+The following NEW packages will be installed:
+
+  libaio1 libmecab2 mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client mysql-common mysql-community-client
+
+  mysql-community-client-core mysql-community-client-plugins mysql-community-server mysql-community-server-core mysql-server
+
+0 upgraded, 13 newly installed, 0 to remove and 85 not upgraded.
+
+Need to get 37,9 MB of archives.
+
+After this operation, 273 MB of additional disk space will be used.
+
+Do you want to continue? [Y/n] y
+
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libaio1 amd64 0.3.112-13build1 [7 176 B]
+
+Get:2 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 libmecab2 amd64 0.996-14build9 [199 kB]
+
+Get:3 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-common amd64 8.0.36-1ubuntu22.04 [67,9 kB]
+
+Get:4 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-utils amd64 0.996-14build9 [4 850 B]
+
+Get:5 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6 718 kB]
+
+Get:6 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-plugins amd64 8.0.36-1ubuntu22.04 [1 443 kB]
+
+Get:7 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-core amd64 8.0.36-1ubuntu22.04 [2 126 kB]
+
+Get:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client amd64 8.0.36-1ubuntu22.04 [2 199 kB]
+
+Get:9 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-client amd64 8.0.36-1ubuntu22.04 [66,6 kB]
+
+Get:10 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server-core amd64 8.0.36-1ubuntu22.04 [24,9 MB]
+
+Get:11 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4 384 B]
+
+Get:12 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server amd64 8.0.36-1ubuntu22.04 [78,4 kB]        
+
+Get:13 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-server amd64 8.0.36-1ubuntu22.04 [66,6 kB]                  
+
+Fetched 37,9 MB in 8s (5 040 kB/s)                                                                                              
+
+Preconfiguring packages ...
+
+Selecting previously unselected package mysql-common.
+
+(Reading database ... 178839 files and directories currently installed.)
+
+Preparing to unpack .../00-mysql-common_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-common (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package mysql-community-client-plugins.
+
+Preparing to unpack .../01-mysql-community-client-plugins_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-community-client-plugins (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package mysql-community-client-core.
+
+Preparing to unpack .../02-mysql-community-client-core_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-community-client-core (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package mysql-community-client.
+
+Preparing to unpack .../03-mysql-community-client_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-community-client (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package mysql-client.
+
+Preparing to unpack .../04-mysql-client_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-client (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package libaio1:amd64.
+
+Preparing to unpack .../05-libaio1_0.3.112-13build1_amd64.deb ...
+
+Unpacking libaio1:amd64 (0.3.112-13build1) ...
+
+Selecting previously unselected package libmecab2:amd64.
+
+Preparing to unpack .../06-libmecab2_0.996-14build9_amd64.deb ...
+
+Unpacking libmecab2:amd64 (0.996-14build9) ...
+
+Selecting previously unselected package mysql-community-server-core.
+
+Preparing to unpack .../07-mysql-community-server-core_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-community-server-core (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package mysql-community-server.
+
+Preparing to unpack .../08-mysql-community-server_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-community-server (8.0.36-1ubuntu22.04) ...
+
+Selecting previously unselected package mecab-utils.
+
+Preparing to unpack .../09-mecab-utils_0.996-14build9_amd64.deb ...
+
+Unpacking mecab-utils (0.996-14build9) ...
+
+Selecting previously unselected package mecab-ipadic.
+
+Preparing to unpack .../10-mecab-ipadic_2.7.0-20070801+main-3_all.deb ...
+
+Unpacking mecab-ipadic (2.7.0-20070801+main-3) ...
+
+Selecting previously unselected package mecab-ipadic-utf8.
+
+Preparing to unpack .../11-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb ...
+
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+
+Selecting previously unselected package mysql-server.
+
+Preparing to unpack .../12-mysql-server_8.0.36-1ubuntu22.04_amd64.deb ...
+
+Unpacking mysql-server (8.0.36-1ubuntu22.04) ...
+
+Setting up libmecab2:amd64 (0.996-14build9) ...
+
+Setting up mysql-common (8.0.36-1ubuntu22.04) ...
+
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+
+Setting up mecab-utils (0.996-14build9) ...
+
+Setting up mysql-community-client-plugins (8.0.36-1ubuntu22.04) ...
+
+Setting up libaio1:amd64 (0.3.112-13build1) ...
+
+Setting up mecab-ipadic (2.7.0-20070801+main-3) ...
+
+Compiling IPA dictionary for Mecab.  This takes long time...
+
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+
+emitting double-array: 100% |###########################################| 
+
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+
+emitting double-array: 100% |###########################################| 
+
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+
+emitting matrix      : 100% |###########################################| 
+
+
+
+done!
+
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+
+Setting up mysql-community-client-core (8.0.36-1ubuntu22.04) ...
+
+Setting up mysql-community-server-core (8.0.36-1ubuntu22.04) ...
+
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+
+Compiling IPA dictionary for Mecab.  This takes long time...
+
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+
+emitting double-array: 100% |###########################################| 
+
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+
+emitting double-array: 100% |###########################################| 
+
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+
+emitting matrix      : 100% |###########################################| 
+
+
+
+done!
+
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+
+Setting up mysql-community-client (8.0.36-1ubuntu22.04) ...
+
+Setting up mysql-client (8.0.36-1ubuntu22.04) ...
+
+Setting up mysql-community-server (8.0.36-1ubuntu22.04) ...
+
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+
+Setting up mysql-server (8.0.36-1ubuntu22.04) ...
+
+Processing triggers for man-db (2.10.2-1) ...
+
+Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+
+4.---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ sudo apt download mc
+
+Get:1 http://ru.archive.ubuntu.com/ubuntu jammy/universe amd64 mc amd64 3:4.8.27-1 [547 kB]
+
+Fetched 547 kB in 1s (651 kB/s)
+
+W: Download is performed unsandboxed as root as file '/home/bils1na/mc_3%3a4.8.27-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+
+bils1na@bils1na-VirtualBox:~$ ls
+
+ animal_registration   Documents   mc_3%3a4.8.27-1_amd64.deb   mysql-apt-config_0.8.29-1_all.deb   Pets       Public   Templates
+
+ Desktop               Downloads   Music                      'Pack animals'                       Pictures   snap     Videos
+
+ bils1na@bils1na-VirtualBox:~$ sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+Selecting previously unselected package mc.
+
+(Reading database ... 179578 files and directories currently installed.)
+
+Preparing to unpack mc_3%3a4.8.27-1_amd64.deb ...
+
+Unpacking mc (3:4.8.27-1) ...
+
+Setting up mc (3:4.8.27-1) ...
+
+update-alternatives: using /usr/bin/mcview to provide /usr/bin/view (view) in auto mode
+
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+
+bils1na@bils1na-VirtualBox:~$ mc
+
+bils1na@bils1na-VirtualBox:~$ sudo dpkg -r mc
+
+(Reading database ... 179669 files and directories currently installed.)
+
+Removing mc (3:4.8.27-1) ...
+
+update-alternatives: using /usr/bin/vim.tiny to provide /usr/bin/view (view) in auto mode
+
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+
+bils1na@bils1na-VirtualBox:~$ mc
+
+Command 'mc' not found, but can be installed with:
+
+sudo apt install mc
+
+5.---------------------------------------------------------------------------------------------------------------------------------------------
+
+bils1na@bils1na-VirtualBox:~$ history 
+
+    1  whoami
+
+    2  ls
+
+    3  ls -ali
+
+    4  cat Pets
+
+    5  ls
+
+    6  sudo su
+
+    7  cat > Pets
+
+    8  ;s
+
+    9  ls
+
+   10  cat Pets
+
+   11  bils1na@bils1na-VirtualBox:~$ cat > Pets
+
+   12  history 
+
+   13  rm Pets
+
+   14  ls
+
+   15  cat > Pets
+
+   16  ls
+
+   17  cat > 
+
+   18  cat > "Pack animals"
+
+   19  ls
+
+   20  nano Pets
+
+   21  cat Pets
+
+   22  nano 'Pack animals' 
+
+   23  cat Pack\ animals 
+
+   24  cat Pack\ animals >> Pets
+
+   25  cat Pets 
+
+   26  mv help
+
+   27  mv --help
+
+   28  cat Pets
+
+   29  ls
+
+   30  nano Pets 
+
+   31  cat Pets
+
+   32  cat Pack\ animals >> Pets 'Human Friends'
+
+   33  cat Pets, Pack\ animals >>'Human Friends'
+
+   34  cat Pets Pack\ animals >>'Human Friends'
+
+   35  ls
+
+   36  cat Human\ Friends 
+
+   37  rm Human\ Friends 
+
+   38  cat Pets Pack\ animals > 'Human Friends'
+
+   39  cat Human\ Friends 
+
+   40  cat Pack\ animals 
+
+   41  cat Pets 
+
+   42  nano Pets 
+
+   43  rm Human\ Friends 
+
+   44  cat Pets Pack\ animals > 'Human Friends'
+
+   45  cat Human\ Friends 
+
+   46  rm Human\ Friends 'Human Friend'
+
+   47  mv Human\ Friends 'Human Friend'
+
+   48  ls
+
+   49  cat Pets Pack\ animals > 'Human Friends'
+
+   50  mv Human\ Friends 'Human Friend'
+
+   51  mv Human\ Friend 'Human Friends'
+
+   52  ls
+
+   53  mkdir 'Human Friends'
+
+   54  mkdir 'Pets'
+
+   55  mkdir 'animal_registration'
+
+   56  ls
+
+   57  mv Human\ Friends animal_registration/
+
+   58  ls
+
+   59  cd animal_registration/
+
+   60  ls
+
+   61  cd ..
+
+   62  ls
+
+   63  cd Downloads/
+
+   64  ls
+
+   65  mv mysql-apt-config_0.8.29-1_all.deb ..
+
+   66  cd ..
+
+   67  ls
+
+   68  sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb 
+
+   69  sudo apt update
+
+   70  sudo apt install mysql-server
+
+   71  sudo apt download nginx 
+
+   72  ls
+
+   73  dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb 
+
+   74  sudo dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb 
+
+   75  systemctl status nginx
+
+   76  rm nginx_1.18.0-6ubuntu14.4_amd64.deb 
+
+   77  ls
+
+   78  sudo apt download mc
+
+   79  ls
+
+   80  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+   81  mc
+
+   82  wget http://security.ubuntu.com/ubuntu/pool/main/libs/libssh2/libssh2-1_1.9.0-2ubuntu0.2_amd64.deb
+
+   83  ls
+
+   84  wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc-data_4.8.27-1_all.deb
+
+   85  ls
+
+   86  sudo dpkg -i mc-data_4.8.27-1_all.deb 
+
+   87  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+   88  ssh
+
+   89  systemctl status ssh
+
+   90  sudo apt-get install ssh
+
+   91  sudo apt --fix-broken install
+
+   92  sudo apt-get install ssh
+
+   93  sudo apt --fix-broken install
+
+   94  systemctl status nginx
+
+   95  sudo apt remove nginx 
+
+   96  mc
+
+   97  sudo apt remove mc 
+
+   98  mc
+
+   99  ls
+
+  100  sudo dpkg mc_3
+
+  101  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb3
+
+  102  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+  103  mc
+
+  104  dpkg --help
+
+  105  sudo dpkg -p mc
+
+  106  sudo dpkg -r mc
+
+  107  mc
+
+  108  history 
+

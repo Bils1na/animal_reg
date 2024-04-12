@@ -1,0 +1,217 @@
+bils1na@bils1na-VirtualBox:~$ history 
+
+    1  whoami
+
+    2  ls
+
+    3  ls -ali
+
+    4  cat Pets
+
+    5  ls
+
+    6  sudo su
+
+    7  cat > Pets
+
+    8  ;s
+
+    9  ls
+
+   10  cat Pets
+
+   11  bils1na@bils1na-VirtualBox:~$ cat > Pets
+
+   12  history 
+
+   13  rm Pets
+
+   14  ls
+
+   15  cat > Pets
+
+   16  ls
+
+   17  cat > 
+
+   18  cat > "Pack animals"
+
+   19  ls
+
+   20  nano Pets
+
+   21  cat Pets
+
+   22  nano 'Pack animals' 
+
+   23  cat Pack\ animals 
+
+   24  cat Pack\ animals >> Pets
+
+   25  cat Pets 
+
+   26  mv help
+
+   27  mv --help
+
+   28  cat Pets
+
+   29  ls
+
+   30  nano Pets 
+
+   31  cat Pets
+
+   32  cat Pack\ animals >> Pets 'Human Friends'
+
+   33  cat Pets, Pack\ animals >>'Human Friends'
+
+   34  cat Pets Pack\ animals >>'Human Friends'
+
+   35  ls
+
+   36  cat Human\ Friends 
+
+   37  rm Human\ Friends 
+
+   38  cat Pets Pack\ animals > 'Human Friends'
+
+   39  cat Human\ Friends 
+
+   40  cat Pack\ animals 
+
+   41  cat Pets 
+
+   42  nano Pets 
+
+   43  rm Human\ Friends 
+
+   44  cat Pets Pack\ animals > 'Human Friends'
+
+   45  cat Human\ Friends 
+
+   46  rm Human\ Friends 'Human Friend'
+
+   47  mv Human\ Friends 'Human Friend'
+
+   48  ls
+
+   49  cat Pets Pack\ animals > 'Human Friends'
+
+   50  mv Human\ Friends 'Human Friend'
+
+   51  mv Human\ Friend 'Human Friends'
+
+   52  ls
+
+   53  mkdir 'Human Friends'
+
+   54  mkdir 'Pets'
+
+   55  mkdir 'animal_registration'
+
+   56  ls
+
+   57  mv Human\ Friends animal_registration/
+
+   58  ls
+
+   59  cd animal_registration/
+
+   60  ls
+
+   61  cd ..
+
+   62  ls
+
+   63  cd Downloads/
+
+   64  ls
+
+   65  mv mysql-apt-config_0.8.29-1_all.deb ..
+
+   66  cd ..
+
+   67  ls
+
+   68  sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb 
+
+   69  sudo apt update
+
+   70  sudo apt install mysql-server
+
+   71  sudo apt download nginx 
+
+   72  ls
+
+   73  dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb 
+
+   74  sudo dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb 
+
+   75  systemctl status nginx
+
+   76  rm nginx_1.18.0-6ubuntu14.4_amd64.deb 
+
+   77  ls
+
+   78  sudo apt download mc
+
+   79  ls
+
+   80  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+   81  mc
+
+   82  wget http://security.ubuntu.com/ubuntu/pool/main/libs/libssh2/libssh2-1_1.9.0-2ubuntu0.2_amd64.deb
+
+   83  ls
+
+   84  wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc-data_4.8.27-1_all.deb
+
+   85  ls
+
+   86  sudo dpkg -i mc-data_4.8.27-1_all.deb 
+
+   87  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+   88  ssh
+
+   89  systemctl status ssh
+
+   90  sudo apt-get install ssh
+
+   91  sudo apt --fix-broken install
+
+   92  sudo apt-get install ssh
+
+   93  sudo apt --fix-broken install
+
+   94  systemctl status nginx
+
+   95  sudo apt remove nginx 
+
+   96  mc
+
+   97  sudo apt remove mc 
+
+   98  mc
+
+   99  ls
+
+  100  sudo dpkg mc_3
+
+  101  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb3
+
+  102  sudo dpkg -i mc_3%3a4.8.27-1_amd64.deb 
+
+  103  mc
+
+  104  dpkg --help
+
+  105  sudo dpkg -p mc
+
+  106  sudo dpkg -r mc
+
+  107  mc
+
+  108  history 
