@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class registryHandler {
+public class RegistryHandler {
     private static final Type TYPE = new TypeToken<Map<Integer, Map<String, String>>>() {}.getType();
     private static final File REGISTRY = new File("src\\main\\java\\org\\example\\animalRegistry\\registry.json");
 
@@ -40,7 +40,26 @@ public class registryHandler {
         jsonData.put(id++, newData);
 
         writeRegistry(jsonData);
+    }
+
+    public static void updateCommand(ArrayList<String> commands, Integer id) {
+        Map<Integer, Map<String, String>> jsonData = loadRegistry();
+
+        Map<String, String> newData = jsonData.get(id);
+        String commandsString = newData.get("commands") == null
+                || newData.get("commands").isEmpty() ? "" : newData.get("commands") + ", ";
+        for (int i = 0; i < commands.size(); i++) {
+            if (i == commands.size() - 1) {
+                commandsString += commands.get(i);
+            } else {
+                commandsString += commands.get(i) + ", ";
+            }
         }
+        newData.put("commands", commandsString);
+        jsonData.put(id, newData);
+
+        writeRegistry(jsonData);
+    }
 
 
     private static void writeRegistry(Map<Integer, Map<String, String>> jsonData) {
