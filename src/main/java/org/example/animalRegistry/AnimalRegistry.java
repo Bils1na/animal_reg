@@ -23,6 +23,7 @@ public class AnimalRegistry {
             System.out.println("4. Order by date");
             System.out.println("5. List of commands");
             System.out.println("6. Exit");
+            System.out.println("Total animals: " + animals.size());
             System.out.println();
 
             int answer = menuIn.nextInt();
